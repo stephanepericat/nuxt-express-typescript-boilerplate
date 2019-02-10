@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "nuxt": "^2.4.3",
+    "nuxt-ts": "latest",
+    "ts-node": "^8.0.2",
+    "vue-property-decorator": "^7.3.0"
+  },
+  "scripts": {
+    "dev": "ts-node server/index",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint": "tslint --project .",
+    "post-update": "yarn upgrade --latest"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "tslint-config-standard": "^8.0.1"
+  }
+}
