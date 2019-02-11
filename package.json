@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "ts-node server/index",
     "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
+    "start": "nuxt-ts build && NODE_ENV=production ts-node server/index",
     "generate": "nuxt-ts generate",
     "lint": "tslint --project .",
     "post-update": "yarn upgrade --latest"

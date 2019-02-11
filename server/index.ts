@@ -6,7 +6,10 @@ const express = require("express");
 const app = express();
 
 const isProd = process.env.NODE_ENV === "production";
-const nuxt = new Nuxt({ dev: !isProd });
+const PORT = 3000;
+const nuxt = new Nuxt({
+  dev: !isProd
+});
 
 if (!isProd) {
   const builder = new Builder(nuxt);
@@ -15,4 +18,4 @@ if (!isProd) {
 
 app.use(nuxt.render);
 
-app.listen(3000, () => console.log("started"));
+app.listen(PORT, () => console.log(`Nuxt.js application started on port: ${PORT}.`));
